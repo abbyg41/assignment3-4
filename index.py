@@ -36,7 +36,7 @@ def run_bmi(event):
 def get_height():
   feet = int(document['feet'].value)
   inches = float(document['inches'].value)
-  return (int(feet)*12) + float(inches))
+  return ((int(feet)*12) + float(inches))
 
 def get_weight():
   weight = document['weight'].value
