@@ -6,9 +6,9 @@ install:
   - pip install -r requirements.txt
 
 # launch website so it can be tested
-#before_script:
+before_script:
  # - seleniumbase install chromedriver
-  #- php -S localhost:8000 &
+  - php -S localhost:8000 &
 
 # command to run tests
 script:
