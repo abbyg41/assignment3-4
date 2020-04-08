@@ -44,7 +44,7 @@ def get_weight():
   (valid, weight) = valid_weight(weight)
   if (valid):
     return weight
-    else return 'Invalid weight value'
+  return 'Invalid weight value'
 
 def valid_weight(weight):
   valid = False;
