@@ -2,6 +2,10 @@ from browser import document
 import func
 
 def setup_events():
+  document['calculateBMI'].bind('click', run_bmi)
+  document['calculateRetirement'].bind('click', run_retirement_calculator)
+  print('buttons set up')
+  
   document['feet'].bind('input', feetInput)
   document['inches'].bind('input', inchesInput)
   document['weight'].bind('input', weightInput)
@@ -11,10 +15,11 @@ def setup_events():
   document['percentSaved'].bind('input', percentSavedInput)
   document['saveGoal'].bind('input', saveGoalInput)
   print('events set up')
-
-  document['calculateBMI'].bind('click', run_bmi)
-  document['calculateRetirement'].bind('click', run_retirement_calculator)
-  print('buttons set up')
+  feetInput('')
+  inchesInput('')
+  currentAgeInput('')
+  percentSavedInput('')
+  print("Ran slider's first feedback")
     
   #start bmi functions
 
@@ -44,12 +49,13 @@ def get_weight():
   (valid, weight) = func.valid_weight(weight)
   if (valid):
     return weight
-    else return 'Invalid weight value'
+  return 'Invalid weight value'
 
 
 def calculate_bmi(height, weight):
   (bmi, category) = func.get_bmi(height, weight)
   output = 'Calculated BMI: ' + str(bmi) + '<br> BMI Category: ' + str(category)
+  
   print(output)
   document['bmiResult'].innerHTML = output
 
