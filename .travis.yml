@@ -13,3 +13,6 @@ before_script:
 script:
   - coverage run unitTest.py
   - pytest end_to_endTest.py --browser=chrome --start-page=http://localhost:8000
+  
+  after_success:
+  - coveralls
