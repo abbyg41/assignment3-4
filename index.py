@@ -1,3 +1,4 @@
+#required to use brython
 from browser import document
 import func
 
