@@ -5,11 +5,11 @@ install:
   - sudo apt-get install php
   - pip install -r requirements.txt
 
-# launch website so it can be tested
+
 before_script:
- # - seleniumbase install chromedriver
+  - seleniumbase install chromedriver
   - php -S localhost:8000 &
 
-# command to run tests
 script:
   - coverage run unitTest.py
+  - pytest endToEndTests.py --browser=chrome --start-page=http://localhost:8000
