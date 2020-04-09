@@ -1,4 +1,10 @@
-
+#bmi functions
+'''
+float get_height(feet, inches)
+(bool, float) valid_weight(weight)
+bool valid_bmi_values(height, weight)
+(float, string) get_bmi(height, weight)
+'''
 
 def get_height(feet, inches):
   return (int(feet)*12) + float(inches)
@@ -33,6 +39,13 @@ def get_bmi(height, weight):
 
   return (bmi, category)
 
+#retirement functions
+'''
+(bool, float) valid_salary(salary)
+(bool, float) valid_save_goal(save_goal)
+bool valid_retirement_values(age, salary, percent_saved, save_goal)
+(bool, int) get_retirement_age(age, salary, percent_saved, save_goal)
+'''
 
 
 def valid_salary(salary):
