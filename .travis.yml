@@ -12,4 +12,4 @@ before_script:
 
 script:
   - coverage run unitTest.py
-  - pytest endToEndTests.py --browser=chrome --start-page=http://localhost:8000
+  - pytest endToEndTest.py --browser=chrome --start-page=http://localhost:8000
